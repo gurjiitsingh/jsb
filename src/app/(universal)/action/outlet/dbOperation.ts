@@ -32,7 +32,7 @@ export async function saveOutlet(input: any) {
   // COUNTRY CONFIG
   // =================================================
 
-  const config = countryConfig[data.countryCode];
+  const config = countryConfig[data.countryCode!];
 
   if (!config) {
     return {
