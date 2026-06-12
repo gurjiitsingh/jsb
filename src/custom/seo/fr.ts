@@ -1,7 +1,7 @@
 export const SEO = {
   title: "JSB Designs Studio – ",
   description:
-    "Authentic Indian food at JSB Designs Studio Gifhorn. Order online for delivery or visit us in Lower Saxony.",
+    "Authentic Indian food at JSB Designs Studio Gifhorn.  or visit us in Lower Saxony.",
 };
 
 

@@ -27,7 +27,7 @@ export const getDynamicSEO = cache(async () => {
     .join(" – ");
 
   // ✅ CLEAN DESCRIPTION
-  const description = `Order online from ${outlet.outletName}${
+  const description = `  ${outlet.outletName}${
     outlet.city ? ` in ${outlet.city}` : ""
   }`;
 

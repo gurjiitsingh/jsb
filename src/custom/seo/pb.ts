@@ -1,7 +1,7 @@
 export const SEO = {
   title: "Masala – Indian Restaurant in Gifhorn, Lower Saxony",
   description:
-    "Authentic Indian food at Masala Gifhorn. Order online for delivery or visit us in Lower Saxony.",
+    "Authentic Indian food at Masala Gifhorn.  or visit us in Lower Saxony.",
 };
 
 

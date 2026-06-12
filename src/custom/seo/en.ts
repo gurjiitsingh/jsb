@@ -1,7 +1,7 @@
 export const SEO = {
-  title: "JSB Designs Studio –  Carrer del Segle XX, 9, Horta-Guinardó, 08041 Barcelona, Spain",
+  title: "JSB Designs Studio –  ",
   description:
-    "Authentic food at JSB Designs Studio , Carrer del Segle XX, 9, Horta-Guinardó, 08041 Barcelona, Spain. Order online for delivery ",
+    "",
 };
 
 
