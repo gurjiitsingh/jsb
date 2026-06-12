@@ -86,7 +86,7 @@ export default function RootLayout({
 
                 <FooterWrapper />
 
-                <CartBottomWrapper />
+                {/* <CartBottomWrapper /> */}
               </div>
             </Providers>
 
