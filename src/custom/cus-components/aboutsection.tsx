@@ -134,7 +134,7 @@ export default function AboutSection() {
               <h4
                 className={`${cormorant.className} text-4xl font-medium`}
               >
-                MMXIV
+                {/* MMXIV */}
               </h4>
             </div>
 
