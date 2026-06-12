@@ -19,7 +19,7 @@ export default function HeroSectionCustom() {
 
         <Image
           src="/images/hero-15.jpg"
-          alt="Vardhman traders background"
+          alt="JSB Designs Studio background"
           fill
           className="object-cover scale-105"
           priority
@@ -49,7 +49,7 @@ export default function HeroSectionCustom() {
               <h2
                 className={`${chicle.className} text-4xl md:text-6xl mb-3`}
               >
-                Vardhman Traders
+                JSB Designs Studio
               </h2>
 
               {/* Subtitle */}

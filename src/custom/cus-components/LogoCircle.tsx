@@ -36,7 +36,7 @@ export default function LogoCircle() {
           </div>
         </div>
       </div>
-      <h1 className="text-md w-full h-5 text-right pt-1 ">Vardhman Traders</h1>
+      <h1 className="text-md w-full h-5 text-right pt-1 ">JSB Designs Studio</h1>
     </div>
   );
 }

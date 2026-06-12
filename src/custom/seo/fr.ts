@@ -1,7 +1,7 @@
 export const SEO = {
-  title: "Vardhman Traders – ",
+  title: "JSB Designs Studio – ",
   description:
-    "Authentic Indian food at Vardhman Traders Gifhorn. Order online for delivery or visit us in Lower Saxony.",
+    "Authentic Indian food at JSB Designs Studio Gifhorn. Order online for delivery or visit us in Lower Saxony.",
 };
 
 
@@ -11,15 +11,15 @@ export const BRANDING = {
   offer_instruction: "",
   delivery_note: "Delivery is also available.",
   home_page_disclaimer:"",// "Food may differ from image.",
-  brand: "Vardhman Traders",
+  brand: "JSB Designs Studio",
   tag_line: "",
-  brand_name: "Vardhman Traders ",
+  brand_name: "JSB Designs Studio ",
    poweredBy: "Powered by",
     poweredByUrl: "http://www.gstadeveloper.com",
     copyright: {
       prefix: "Copyright ©",
       suffix: "All Rights Reserved by",
-      company: "Vardhman Traders "
+      company: "JSB Designs Studio "
     },
 
 
@@ -30,7 +30,7 @@ export const BRANDING = {
   copyright: {
     prefix: "Copyright ©",
     suffix: "All Rights Reserved by",
-    company: "Vardhman Traders ",
+    company: "JSB Designs Studio ",
   },
 },
 

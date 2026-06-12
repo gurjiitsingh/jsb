@@ -1,7 +1,7 @@
 export const SEO = {
-  title: "Vardhman Traders –  Carrer del Segle XX, 9, Horta-Guinardó, 08041 Barcelona, Spain",
+  title: "JSB Designs Studio –  Carrer del Segle XX, 9, Horta-Guinardó, 08041 Barcelona, Spain",
   description:
-    "Authentic food at Vardhman Traders , Carrer del Segle XX, 9, Horta-Guinardó, 08041 Barcelona, Spain. Order online for delivery ",
+    "Authentic food at JSB Designs Studio , Carrer del Segle XX, 9, Horta-Guinardó, 08041 Barcelona, Spain. Order online for delivery ",
 };
 
 
@@ -11,15 +11,15 @@ export const BRANDING = {
   offer_instruction: "",
   delivery_note: "Delivery is also available.",
   home_page_disclaimer:"",// "Food may differ from image.",
-  brand: "Vardhman Traders",
+  brand: "JSB Designs Studio",
   tag_line: "",
-  brand_name: "Vardhman Traders ",
+  brand_name: "JSB Designs Studio ",
    poweredBy: "Powered by",
     poweredByUrl: "http://www.gstadeveloper.com",
     copyright: {
       prefix: "Copyright ©",
       suffix: "All Rights Reserved by",
-      company: "Vardhman Traders "
+      company: "JSB Designs Studio "
     },
 
 
@@ -30,7 +30,7 @@ export const BRANDING = {
   copyright: {
     prefix: "Copyright ©",
     suffix: "All Rights Reserved by",
-    company: "Vardhman Traders ",
+    company: "JSB Designs Studio ",
   },
 },
 

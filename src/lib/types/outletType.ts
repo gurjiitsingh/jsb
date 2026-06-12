@@ -42,7 +42,9 @@ export const outletSchema = z.object({
   // COUNTRY
   countryCode: z
     .string()
-    .min(2, "Country is required"),
+    .min(2, "Country is required")
+    .optional()
+    .nullable(),
 
   // CONTACT
   phone: z.string().optional(),

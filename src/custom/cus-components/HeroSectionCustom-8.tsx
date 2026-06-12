@@ -52,7 +52,7 @@ export default function HeroSectionAsymmetricBG() {
             className={`${chicle.className} text-4xl md:text-6xl leading-tight mb-5`}
           >
             Taste the Real  
-            <br /> Vardhman Traders
+            <br /> JSB Designs Studio
           </h1>
 
           {/* Description */}

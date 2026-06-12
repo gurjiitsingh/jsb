@@ -1,69 +1,141 @@
 import Image from "next/image";
+import { Cormorant_Garamond } from "next/font/google";
+
+const cormorant = Cormorant_Garamond({
+  subsets: ["latin"],
+  weight: ["400", "500", "600"],
+});
 
 export default function HeroSection() {
   return (
-   <div className="relative mx-auto h-[500px] w-full max-w-md">
-  {/* Card 1 */}
-  <div className="absolute left-0 top-0 w-72 rounded-3xl border border-white/10 bg-white/5 p-6 backdrop-blur-md">
-    <div className="relative mb-4 h-40 overflow-hidden rounded-2xl">
-      <Image
-        src="/images/residence.jpg"
-        alt="Modern Residence"
-        fill
-        className="object-cover"
-      />
-    </div>
 
-    <h3 className="text-xl font-semibold">
-      Modern Residence
-    </h3>
+    <section className="px-6 pt-2 pb-10 lg:px-12">
 
-    <p className="mt-2 text-sm text-gray-400">
-      Contemporary architecture with clean lines and natural
-      materials.
-    </p>
-  </div>
 
-  {/* Card 2 */}
-  <div className="absolute right-0 top-28 w-72 rounded-3xl border border-white/10 bg-white/5 p-6 backdrop-blur-md">
-    <div className="relative mb-4 h-40 overflow-hidden rounded-2xl">
-      <Image
-        src="/images/commercial.jpg"
-        alt="Commercial Complex"
-        fill
-        className="object-cover"
-      />
-    </div>
+      <div className="mb-1 text-center">
+        <span className="mb-1 inline-block text-xs uppercase tracking-[0.45em] text-gray-400">
+          Featured Projects
+        </span>
 
-    <h3 className="text-xl font-semibold">
-      Commercial Complex
-    </h3>
+        <h2
+          className={`${cormorant.className} text-4xl font-medium leading-tight text-white sm:text-5xl md:text-6xl`}
+        >
+          Spaces Crafted
+          <br />
+          <span className="text-gray-300">
+            With Vision & Detail
+          </span>
+        </h2>
 
-    <p className="mt-2 text-sm text-gray-400">
-      Innovative workspaces designed for growth and collaboration.
-    </p>
-  </div>
+        <div className="mx-auto mt-6 h-px w-24 bg-white/20" />
 
-  {/* Card 3 */}
-  <div className="absolute bottom-0 left-12 w-72 rounded-3xl border border-white/10 bg-white/5 p-6 backdrop-blur-md">
-    <div className="relative mb-4 h-40 overflow-hidden rounded-2xl">
-      <Image
-        src="/luxury-interior.jpg"
-        alt="Luxury Interior"
-        fill
-        className="object-cover"
-      />
-    </div>
+        <p className="mx-auto mt-6 max-w-lg text-sm leading-7 text-gray-400 md:text-base">
+          From contemporary residences to sophisticated commercial spaces and
+          luxurious interiors, every project reflects our commitment to timeless
+          architecture and refined craftsmanship.
+        </p>
+      </div>
 
-    <h3 className="text-xl font-semibold">
-      Luxury Interior
-    </h3>
+      <div className="relative mx-auto h-[900px] w-full max-w-4xl md:h-[720px]">
 
-    <p className="mt-2 text-sm text-gray-400">
-      Elegant interiors balancing aesthetics, comfort, and
-      functionality.
-    </p>
-  </div>
-</div>
+        {/* Card 1 */}
+        <div className="absolute left-1/2 top-0 w-[300px] md:w-[320px] -translate-x-1/2 md:left-0 md:translate-x-0 rounded-3xl border border-white/10 bg-white/5 p-5 backdrop-blur-md">
+          <div className="relative mb-4 h-44 overflow-hidden rounded-2xl">
+            <Image
+              src="/modern-residence.jpg"
+              alt="Modern Residence"
+              fill
+              className="object-cover"
+            />
+
+            {/* Overlay Text */}
+            <div className="absolute inset-0 bg-black/25" />
+
+            <div
+              className={`absolute bottom-4 left-4 text-white ${cormorant.className}`}
+            >
+              <p className="text-xs uppercase tracking-[0.35em]">
+                Residential
+              </p>
+
+              <h3 className="text-3xl font-medium">
+                Modern Residence
+              </h3>
+            </div>
+          </div>
+
+          <p className="text-sm text-gray-400">
+            Contemporary architecture with clean lines and natural materials.
+          </p>
+        </div>
+
+        {/* Card 2 */}
+        <div className="absolute left-1/2 top-[270px] w-[300px] md:w-[320px] -translate-x-1/2 md:left-auto md:right-4 md:top-16 md:translate-x-0 rounded-3xl border border-white/10 bg-white/5 p-5 backdrop-blur-md">
+          <div className="relative mb-4 h-44 overflow-hidden rounded-2xl">
+            <Image
+              src="/commercial-complex.jpg"
+              alt="Commercial Complex"
+              fill
+              className="object-cover"
+            />
+
+            <div className="absolute inset-0 bg-black/25" />
+
+            <div
+              className={`absolute bottom-4 left-4 text-white ${cormorant.className}`}
+            >
+              <p className="text-xs uppercase tracking-[0.35em]">
+                Commercial
+              </p>
+
+              <h3 className="text-3xl font-medium">
+                Urban Workspace
+              </h3>
+            </div>
+          </div>
+
+          <p className="text-sm text-gray-400">
+            Innovative workspaces designed for growth and collaboration.
+          </p>
+        </div>
+
+        {/* Card 3 */}
+        <div className="absolute left-1/2 top-[540px] w-[300px] md:w-[320px] -translate-x-1/2 md:bottom-0 md:left-16 md:top-auto md:translate-x-0 rounded-3xl border border-white/10 bg-white/5 p-5 backdrop-blur-md">
+          <div className="relative mb-4 h-44 overflow-hidden rounded-2xl">
+            <Image
+              src="/luxury-interior.jpg"
+              alt="Luxury Interior"
+              fill
+              className="object-cover"
+            />
+
+            <div className="absolute inset-0 bg-black/25" />
+
+            <div
+              className={`absolute bottom-4 left-4 text-white ${cormorant.className}`}
+            >
+              <p className="text-xs uppercase tracking-[0.35em]">
+                Interior
+              </p>
+
+              <h3 className="text-3xl font-medium">
+                Timeless Luxury
+              </h3>
+            </div>
+          </div>
+
+          <p className="text-sm text-gray-400">
+            Elegant interiors balancing aesthetics, comfort, and functionality.
+          </p>
+        </div>
+
+        {/* Background Text */}
+        <div
+          className={`pointer-events-none absolute left-1/2 top-1/2 hidden -translate-x-1/2 -translate-y-1/2 text-[180px] lg:text-[240px] text-white/[0.03] md:block ${cormorant.className}`}
+        >
+          ARCH
+        </div>
+      </div>
+    </section>
   );
 }

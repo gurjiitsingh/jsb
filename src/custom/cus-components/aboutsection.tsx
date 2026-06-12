@@ -1,45 +1,80 @@
+import Image from "next/image";
+import { Cormorant_Garamond } from "next/font/google";
+
+const cormorant = Cormorant_Garamond({
+  subsets: ["latin"],
+  weight: ["400", "500", "600"],
+});
+
 export default function AboutSection() {
   return (
-    <section className="bg-[#11161d] py-24 text-white">
+    <section className="relative overflow-hidden bg-[#11161d] py-28 text-white">
+      {/* Background Text */}
+      <div
+        className={`pointer-events-none absolute right-0 top-1/2 hidden -translate-y-1/2 select-none text-[180px] text-white/[0.03] xl:block ${cormorant.className}`}
+      >
+        ATELIER
+      </div>
+
       <div className="container mx-auto px-6 lg:px-12">
-        <div className="grid items-center gap-16 lg:grid-cols-2">
-          
-          {/* Left Side */}
+        <div className="grid items-center gap-20 lg:grid-cols-2">
+          {/* Left Content */}
           <div>
-            <span className="mb-4 inline-block text-sm uppercase tracking-[0.3em] text-gray-400">
-              About Studio
+            <span className="mb-4 inline-block text-xs uppercase tracking-[0.45em] text-gray-400">
+              Our Philosophy
             </span>
 
-            <h2 className="text-4xl font-bold leading-tight md:text-5xl">
-              Crafting Architecture
+            <h2
+              className={`${cormorant.className} text-4xl font-medium leading-tight md:text-5xl lg:text-7xl`}
+            >
+              Designing Spaces
               <br />
-              With Purpose & Precision
+              <span className="text-gray-300">
+                That Endure Time
+              </span>
             </h2>
 
             <p className="mt-8 text-lg leading-relaxed text-gray-400">
-              We believe architecture is more than creating buildings.
-              It is about designing experiences, shaping communities,
-              and improving the way people live, work, and interact.
+              Architecture is more than structure. It is the art of shaping
+              environments that inspire, connect people, and enrich everyday
+              life.
             </p>
 
             <p className="mt-6 text-lg leading-relaxed text-gray-400">
-              Our multidisciplinary team combines innovation,
-              functionality, and timeless aesthetics to deliver
-              spaces that remain relevant for generations.
+              From contemporary residences to commercial environments and
+              refined interiors, our work balances innovation, functionality,
+              and timeless aesthetics to create spaces with lasting value.
             </p>
 
-            <div className="mt-10 flex flex-wrap gap-10">
+            {/* Services */}
+            <div className="mt-14 space-y-10 border-l border-white/10 pl-8">
               <div>
-                <h3 className="text-4xl font-bold">150+</h3>
+                <h3 className={`${cormorant.className} text-3xl font-medium`}>
+                  Residential Architecture
+                </h3>
+
                 <p className="mt-2 text-gray-400">
-                  Completed Projects
+                  Thoughtfully designed homes that blend comfort and elegance.
                 </p>
               </div>
 
               <div>
-                <h3 className="text-4xl font-bold">12+</h3>
+                <h3 className={`${cormorant.className} text-3xl font-medium`}>
+                  Commercial Spaces
+                </h3>
+
                 <p className="mt-2 text-gray-400">
-                  Years Experience
+                  Functional environments crafted for productivity and growth.
+                </p>
+              </div>
+
+              <div>
+                <h3 className={`${cormorant.className} text-3xl font-medium`}>
+                  Interior Design
+                </h3>
+
+                <p className="mt-2 text-gray-400">
+                  Sophisticated interiors with a focus on detail and experience.
                 </p>
               </div>
             </div>
@@ -47,47 +82,65 @@ export default function AboutSection() {
 
           {/* Right Side */}
           <div className="relative">
-            <div className="grid grid-cols-2 gap-4">
-              
-              <div className="overflow-hidden rounded-3xl">
-                <img
-                  src="https://images.unsplash.com/photo-1511818966892-d7d671e672a2"
+            <div className="grid grid-cols-2 gap-5">
+              {/* Large Image */}
+              <div className="overflow-hidden rounded-[2rem]">
+                <Image
+                  src="/about-1.jpg"
                   alt="Architecture"
-                  className="h-[500px] w-full object-cover"
+                  width={700}
+                  height={900}
+                  className="h-[520px] w-full object-cover transition duration-700 hover:scale-105"
                 />
               </div>
 
-              <div className="flex flex-col gap-4">
-                <div className="overflow-hidden rounded-3xl">
-                  <img
-                    src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85"
-                    alt="Interior Design"
-                    className="h-[240px] w-full object-cover"
+              {/* Right Column */}
+              <div className="flex flex-col gap-5">
+                <div className="overflow-hidden rounded-[2rem]">
+                  <Image
+                    src="/about-2.jpg"
+                    alt="Interior"
+                    width={500}
+                    height={400}
+                    className="h-[250px] w-full object-cover transition duration-700 hover:scale-105"
                   />
                 </div>
 
-                <div className="rounded-3xl border border-white/10 bg-white/5 p-8 backdrop-blur-md">
-                  <h3 className="text-5xl font-bold">45+</h3>
-
-                  <p className="mt-3 text-gray-400">
-                    Cities across India where our projects have been delivered.
+                {/* Principle Card */}
+                <div className="rounded-[2rem] border border-white/10 bg-white/5 p-8 backdrop-blur-md">
+                  <p className="text-xs uppercase tracking-[0.4em] text-gray-500">
+                    Signature Principle
                   </p>
+
+                  <h3
+                    className={`${cormorant.className} mt-5 text-5xl font-medium leading-tight`}
+                  >
+                    Form
+                    <br />
+                    Meets
+                    <br />
+                    Function
+                  </h3>
                 </div>
               </div>
             </div>
 
             {/* Floating Card */}
-            <div className="absolute -bottom-8 left-10 rounded-2xl border border-white/10 bg-[#181f29] px-6 py-4 shadow-2xl">
-              <p className="text-sm uppercase tracking-widest text-gray-500">
-                Since
+            <div className="absolute -bottom-8 left-10 rounded-3xl border border-white/10 bg-[#181f29] px-8 py-5 shadow-2xl">
+              <p className="text-xs uppercase tracking-[0.35em] text-gray-500">
+                Established
               </p>
 
-              <h4 className="text-3xl font-bold">
-                2014
+              <h4
+                className={`${cormorant.className} text-4xl font-medium`}
+              >
+                MMXIV
               </h4>
             </div>
-          </div>
 
+            {/* Decorative Line */}
+            <div className="absolute -left-10 top-1/2 hidden h-40 w-px -translate-y-1/2 bg-white/10 lg:block" />
+          </div>
         </div>
       </div>
     </section>

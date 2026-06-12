@@ -30,11 +30,11 @@ export default function Page() {
 <ServicesSection />
 <DesignProcessSection />
 
-      <BestOfMonth />
-      <CategorySliderLight />
+      {/* <BestOfMonth /> */}
+      {/* <CategorySliderLight />
       <Suspense fallback={<div>Loading...</div>}>
         <ProductsWrapper />
-      </Suspense>
+      </Suspense> */}
 
       {/* ✅ Server async component with streaming */}
       <Suspense fallback={<div className="h-40" />}>

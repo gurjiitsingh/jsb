@@ -1,139 +1,154 @@
 import React from "react";
+import { Cormorant_Garamond } from "next/font/google";
+
+const cormorant = Cormorant_Garamond({
+  subsets: ["latin"],
+  weight: ["400", "500", "600"],
+});
 
 export default function AboutUs() {
   return (
-    <section className="relative overflow-hidden py-20 md:py-28 bg-white">
-
+    <section className="relative overflow-hidden bg-white py-24 md:py-32">
       {/* Background */}
       <div className="absolute inset-0 bg-[linear-gradient(to_bottom_right,#ffffff,#fafafa,#f5f5f5,#ffffff)]" />
 
-      {/* Soft Glow */}
-      <div className="absolute top-0 left-0 w-[350px] h-[350px] bg-pink-100/60 blur-[120px] rounded-full" />
-      <div className="absolute bottom-0 right-0 w-[350px] h-[350px] bg-rose-100/60 blur-[120px] rounded-full" />
+      {/* Decorative Circle */}
+      <div className="absolute left-0 top-0 h-[350px] w-[350px] rounded-full bg-neutral-100 blur-[120px]" />
+      <div className="absolute bottom-0 right-0 h-[350px] w-[350px] rounded-full bg-neutral-100 blur-[120px]" />
 
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-12">
+      {/* Background Text */}
+      <div
+        className={`pointer-events-none absolute right-0 top-1/2 hidden -translate-y-1/2 select-none text-[180px] text-black/[0.03] xl:block ${cormorant.className}`}
+      >
+        STUDIO
+      </div>
 
-        <div className="grid lg:grid-cols-2 gap-14 items-center">
-
-          {/* Left Content */}
+      <div className="relative mx-auto max-w-7xl px-6 lg:px-12">
+        <div className="grid items-center gap-20 lg:grid-cols-2">
+          {/* Left */}
           <div>
-
-            <span className="uppercase tracking-[4px] text-xs font-medium text-pink-600">
-              Since Years of Trust
+            <span className="text-xs uppercase tracking-[0.45em] text-neutral-400">
+              About Us
             </span>
 
-            <h1 className="text-4xl md:text-6xl font-light text-neutral-900 mt-4 mb-8 leading-tight">
-              About
+            <h1
+              className={`${cormorant.className} mt-5 text-5xl font-medium leading-tight text-neutral-900 md:text-6xl`}
+            >
+              Designing Spaces
               <br />
-              Vardhman Traders
+              That Inspire
             </h1>
 
-            <div className="space-y-6 text-neutral-600 leading-relaxed text-base">
-
+            <div className="mt-10 space-y-7 text-lg leading-relaxed text-neutral-600">
               <p>
-                Welcome to <strong>Vardhman Traders</strong>, a trusted
-                name serving customers from the heart of Jalandhar.
-                Located at <strong>E.P. 333, Inside Saidan Gate</strong>,
-                we have built our reputation through quality products,
-                reliable service, and long-term customer relationships.
+                At <strong>JSB Designs Studio</strong>, we believe architecture
+                is more than creating structures. It is about crafting
+                environments that enhance everyday experiences and stand the
+                test of time.
               </p>
 
               <p>
-                We believe that business is built on trust, honesty,
-                and customer satisfaction. Every customer who visits us
-                receives the same commitment to quality, fair pricing,
-                and professional service.
+                Our approach combines thoughtful planning, refined aesthetics,
+                and functional design to deliver spaces that are elegant,
+                practical, and deeply connected to the people who use them.
               </p>
 
               <p>
-                Our mission is simple — to provide dependable products
-                and exceptional service while maintaining the values
-                that have helped us earn the confidence of our customers
-                over the years.
+                Every project reflects our commitment to craftsmanship,
+                innovation, and timeless architectural principles.
               </p>
-
             </div>
 
-            {/* Stats */}
-            <div className="flex flex-wrap gap-10 mt-10">
-
+            {/* Features */}
+            <div className="mt-14 space-y-8 border-l border-neutral-200 pl-8">
               <div>
-                <h3 className="text-3xl font-semibold text-neutral-900">
-                  100%
+                <h3 className={`${cormorant.className} text-3xl`}>
+                  Residential Design
                 </h3>
-                <p className="text-sm text-neutral-500 mt-1">
-                  Customer Focused
+
+                <p className="mt-2 text-neutral-500">
+                  Creating homes that balance comfort, beauty, and purpose.
                 </p>
               </div>
 
               <div>
-                <h3 className="text-3xl font-semibold text-neutral-900">
-                  Quality
+                <h3 className={`${cormorant.className} text-3xl`}>
+                  Interior Spaces
                 </h3>
-                <p className="text-sm text-neutral-500 mt-1">
-                  Products & Service
+
+                <p className="mt-2 text-neutral-500">
+                  Thoughtfully curated interiors with timeless appeal.
                 </p>
               </div>
 
               <div>
-                <h3 className="text-3xl font-semibold text-neutral-900">
-                  Trust
+                <h3 className={`${cormorant.className} text-3xl`}>
+                  Architectural Planning
                 </h3>
-                <p className="text-sm text-neutral-500 mt-1">
-                  Built Over Time
+
+                <p className="mt-2 text-neutral-500">
+                  Functional layouts designed with precision and detail.
                 </p>
               </div>
-
             </div>
-
           </div>
 
-          {/* Right Side */}
+          {/* Right */}
           <div className="relative">
-
-            <div className="bg-white border border-neutral-200 rounded-[32px] p-10 shadow-[0_20px_60px_rgba(0,0,0,0.06)]">
-
-              <span className="text-xs uppercase tracking-[4px] text-pink-600">
-                Our Location
+            <div className="rounded-[36px] border border-neutral-200 bg-white p-12 shadow-[0_25px_80px_rgba(0,0,0,0.06)]">
+              <span className="text-xs uppercase tracking-[0.4em] text-neutral-400">
+                Our Philosophy
               </span>
 
-              <h3 className="text-3xl font-semibold text-neutral-900 mt-4 mb-6">
-                Vardhman Traders
+              <h3
+                className={`${cormorant.className} mt-5 text-5xl font-medium text-neutral-900`}
+              >
+                Form
+                <br />
+                Meets
+                <br />
+                Function
               </h3>
 
-              <div className="space-y-4 text-neutral-600">
-
+              <div className="mt-10 space-y-8 text-neutral-600">
                 <div>
-                  <p className="text-sm uppercase tracking-wide text-neutral-400 mb-1">
-                    Address
+                  <p className="mb-2 text-xs uppercase tracking-[0.3em] text-neutral-400">
+                    Vision
                   </p>
+
                   <p>
-                    E.P. 333
-                    <br />
-                    Inside Saidan Gate
-                    <br />
-                    Jalandhar
+                    To create timeless architecture that enriches people's
+                    lives.
                   </p>
                 </div>
 
                 <div>
-                  <p className="text-sm uppercase tracking-wide text-neutral-400 mb-1">
-                    Commitment
+                  <p className="mb-2 text-xs uppercase tracking-[0.3em] text-neutral-400">
+                    Approach
                   </p>
+
                   <p>
-                    Quality products, reliable service,
-                    and customer satisfaction.
+                    Combining creativity, functionality, and attention to
+                    detail in every project.
                   </p>
                 </div>
-
               </div>
-
             </div>
 
+            {/* Floating Card */}
+            <div className="absolute -bottom-8 left-10 rounded-3xl border border-neutral-200 bg-white px-8 py-5 shadow-2xl">
+              <p className="text-xs uppercase tracking-[0.35em] text-neutral-400">
+                Established
+              </p>
+
+              <h4
+                className={`${cormorant.className} text-4xl font-medium text-neutral-900`}
+              >
+                MMXIV
+              </h4>
+            </div>
           </div>
-
         </div>
-
       </div>
     </section>
   );

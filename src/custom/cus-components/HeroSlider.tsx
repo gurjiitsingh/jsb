@@ -19,7 +19,7 @@ export default function HeroSlider() {
       >
         <SwiperSlide>
           <img
-            src="/1.jpg"
+            src="/1.webp"
             alt="Slide 1"
             className="w-full h-auto"
           />
@@ -27,7 +27,7 @@ export default function HeroSlider() {
 
         <SwiperSlide>
           <img
-            src="/2.jpg"
+            src="/2.webp"
             alt="Slide 2"
             className="w-full h-auto"
           />
@@ -35,7 +35,7 @@ export default function HeroSlider() {
 
         <SwiperSlide>
           <img
-            src="/3.png"
+            src="/3.webp"
             alt="Slide 3"
             className="w-full h-auto"
           />

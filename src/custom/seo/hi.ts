@@ -1,7 +1,7 @@
 export const SEO = {
-  title: "Vardhman traders",
+  title: "JSB Designs Studio",
   description:
-    "Vardhman traders",
+    "JSB Designs Studio",
 };
 
 
@@ -13,13 +13,13 @@ export const BRANDING = {
   home_page_disclaimer:"",// "Food may differ from image.",
   brand: "Masala",
   tag_line: "Taste of India",
-  brand_name: "Vardhman Traders",
+  brand_name: "JSB Designs Studio",
    poweredBy: "Powered by",
     poweredByUrl: "http://www.gstadeveloper.com",
     copyright: {
       prefix: "Copyright ©",
       suffix: "All Rights Reserved by",
-      company: "Vardhman Traders"
+      company: "JSB Designs Studio"
     },
 
 
@@ -30,7 +30,7 @@ export const BRANDING = {
   copyright: {
     prefix: "Copyright ©",
     suffix: "All Rights Reserved by",
-    company: "Vardhman Traders",
+    company: "JSB Designs Studio",
   },
 },
 

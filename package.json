@@ -1,11 +1,11 @@
 {
-  "name": "vardhman-traders",
+  "name": "jsbdesignsstudio",
   "version": "0.6.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start -p 3022",
+    "start": "next start -p 3023",
     "lint": "next lint"
   },
   "dependencies": {
