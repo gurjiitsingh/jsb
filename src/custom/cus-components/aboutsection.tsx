@@ -86,7 +86,7 @@ export default function AboutSection() {
               {/* Large Image */}
               <div className="overflow-hidden rounded-[2rem]">
                 <Image
-                  src="/about-1.jpg"
+                  src="/established.jpg"
                   alt="Architecture"
                   width={700}
                   height={900}
@@ -98,7 +98,7 @@ export default function AboutSection() {
               <div className="flex flex-col gap-5">
                 <div className="overflow-hidden rounded-[2rem]">
                   <Image
-                    src="/about-2.jpg"
+                    src="/partition-wall.jpg"
                     alt="Interior"
                     width={500}
                     height={400}

@@ -3,23 +3,23 @@ export default function FeaturedProjects() {
     {
       title: "Modern Villa",
       category: "Residential Architecture",
-      location: "Jalandhar, Punjab",
+      // location: "Jalandhar, Punjab",
       image:
-        "https://images.unsplash.com/photo-1600585154340-be6161a56a0a",
+        "/modern-villa.jpg",
     },
     {
       title: "Corporate Office",
       category: "Commercial Design",
-      location: "Ludhiana, Punjab",
+      // location: "Ludhiana, Punjab",
       image:
-        "https://images.unsplash.com/photo-1497366811353-6870744d04b2",
+        "/corporate-office.jpg",
     },
     {
       title: "Luxury Interior",
       category: "Interior Design",
-      location: "Chandigarh",
+      // location: "Chandigarh",
       image:
-        "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85",
+        "/luxery-interior.jpg",
     },
   ];
 
@@ -73,11 +73,11 @@ export default function FeaturedProjects() {
                 </h3>
 
                 <p className="mt-2 text-gray-400">
-                  {project.location}
+                  {/* {project.location} */}
                 </p>
 
                 <button className="mt-6 inline-flex items-center gap-2 text-sm font-medium">
-                  View Project
+                  {/* View Project */}
                   <span className="transition group-hover:translate-x-1">
                     →
                   </span>
@@ -90,7 +90,7 @@ export default function FeaturedProjects() {
         {/* Bottom CTA */}
         <div className="mt-20 text-center">
           <button className="rounded-full border border-white/20 px-8 py-4 transition hover:bg-white hover:text-black">
-            View All Projects
+            {/* View All Projects */}
           </button>
         </div>
       </div>

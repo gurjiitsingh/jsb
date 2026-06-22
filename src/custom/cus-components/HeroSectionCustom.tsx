@@ -103,7 +103,7 @@ export default function HeroSection() {
         <div className="absolute left-1/2 top-[540px] w-[300px] md:w-[320px] -translate-x-1/2 md:bottom-0 md:left-16 md:top-auto md:translate-x-0 rounded-3xl border border-white/10 bg-white/5 p-5 backdrop-blur-md">
           <div className="relative mb-4 h-44 overflow-hidden rounded-2xl">
             <Image
-              src="/luxury-interior.jpg"
+              src="/timeless-luxery-1.jpg"
               alt="Luxury Interior"
               fill
               className="object-cover"
