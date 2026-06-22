@@ -1,3 +1,71 @@
+import Link from "next/link";
+
+// lib/types/projectRequirementType.ts
+
+export type TProjectRequirement = {
+  id?: string;
+
+  // Client Details
+  clientName: string;
+  email: string;
+  phone: string;
+
+  // Location
+  city?: string;
+  state?: string;
+  address?: string;
+
+  // Project Details
+  projectType:
+    | "Residential"
+    | "Commercial"
+    | "Office"
+    | "Villa"
+    | "Apartment"
+    | "Interior"
+    | "Renovation"
+    | "Landscape"
+    | "";
+
+  propertySize?: string; // 1200 sq ft
+  numberOfFloors?: string;
+
+  // Budget
+  budgetRange:
+    | "Under ₹5 Lakh"
+    | "₹5-10 Lakh"
+    | "₹10-25 Lakh"
+    | "₹25-50 Lakh"
+    | "Above ₹50 Lakh"
+    | "";
+
+  // Timeline
+  expectedStartDate?: string;
+  expectedCompletion?: string;
+
+  // Services Needed
+  services: string[];
+
+  // Requirement Description
+  description: string;
+
+  // Additional Information
+  inspirationLink?: string;
+  specialRequirements?: string;
+
+  // Status
+  status:
+    | "New"
+    | "Contacted"
+    | "Meeting Scheduled"
+    | "Quotation Sent"
+    | "In Progress"
+    | "Completed"
+    | "Rejected";
+
+  createdAt: number;
+};
+
 export default function ServicesSection() {
   const services = [
     {
@@ -90,11 +158,16 @@ export default function ServicesSection() {
         </div>
 
         {/* CTA */}
-        <div className="mt-16 text-center">
-          <button className="rounded-full border border-white/20 px-8 py-4 transition hover:bg-white hover:text-black">
-            Discuss Your Project
-          </button>
-        </div>
+   
+
+<div className="mt-16 text-center">
+  <Link
+    href="/discuss-your-project"
+    className="inline-block rounded-full border border-white/20 px-8 py-4 transition hover:bg-white hover:text-black"
+  >
+    Discuss Your Project
+  </Link>
+</div>
       </div>
     </section>
   );

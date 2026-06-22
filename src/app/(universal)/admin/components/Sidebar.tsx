@@ -28,6 +28,7 @@ import { UseSiteContext } from "@/SiteContext/SiteContext";
 
 type SidebarFlagKey =
   | "SHOW_HOME"
+  | "SHOW_MESSAGES"
   | "SHOW_ORDERS"
   | "SHOW_ORDERS_REALTIME"
   | "SHOW_SALE"
@@ -62,6 +63,7 @@ function flag(env?: string) {
 
 export const sidebarFlags: Record<SidebarFlagKey, boolean> = {
   SHOW_HOME: flag(process.env.NEXT_PUBLIC_SHOW_HOME),
+  SHOW_MESSAGES: flag(process.env.NEXT_PUBLIC_SHOW_MESSAGES),
   SHOW_ORDERS: flag(process.env.NEXT_PUBLIC_SHOW_ORDERS),
   SHOW_ORDERS_REALTIME: flag(process.env.NEXT_PUBLIC_SHOW_ORDERS_REALTIME),
   SHOW_SALE: flag(process.env.NEXT_PUBLIC_SHOW_SALE),
@@ -89,7 +91,8 @@ const Sidebar = () => {
     BRANDING: {
       sidebar: {
         home: "Home",
-        orders: "Orders",
+        orders: "Messages",
+       
         orders_realtime: "Orders Realtime",
         sale: "Sale",
         reservations: "Reservations",
@@ -112,67 +115,10 @@ const Sidebar = () => {
 
   const menuList: Titem[] = [
     { key: "SHOW_HOME", name: BRANDING.sidebar.home, link: "/", icon: <GoHome /> },
-    { key: "SHOW_ORDERS", name: BRANDING.sidebar.orders, link: "/admin", icon: <MdDashboard /> },
-    {
-      key: "SHOW_ORDERS_REALTIME",
-      name: BRANDING.sidebar.orders_realtime,
-      link: "/admin/order-realtime",
-      icon: <MdOutlineCrisisAlert />,
-    },
-    { key: "SHOW_CATEGORIES", name: BRANDING.sidebar.categories, link: "/admin/categories", icon: <MdCategory /> },
-    { key: "SHOW_PRODUCTS", name: BRANDING.sidebar.products, link: "/admin/products", icon: <MdInventory /> },
+    { key: "SHOW_MESSAGES", name: BRANDING.sidebar.messages, link: "/admin", icon: <MdDashboard /> },
+   
 
-      {
-    key: "SHOW_MODIFIER_GROUPS",
-    name: "Modifier Groups",
-    link: "/admin/modifier-groups",
-    icon: <MdRestaurantMenu />,
-  },
-  {
-    key: "SHOW_MODIFIER",
-    name: "Modifiers",
-    link: "/admin/modifiers",
-    icon: <MdRestaurantMenu />,
-  },
-    { key: "SHOW_RESERVATIONS", name: BRANDING.sidebar.reservations, link: "/admin/reservations", icon: <BsCardList /> },
-
-    { key: "SHOW_SALE", name: BRANDING.sidebar.sale, link: "/admin/sale", icon: <FaClipboardList /> },
-
-    {
-      key: "SHOW_PICKUP_DISCOUNT",
-      name: BRANDING.sidebar.pickup_discount,
-      link: "/admin/pickupdiscount/pickup-discount",
-      icon: <MdLocalOffer />,
-    },
-
-    { key: "SHOW_VARIANTS", name: BRANDING.sidebar.variants, link: "/admin/flavorsProductG", icon: <MdRestaurantMenu /> },
-
-    { key: "SHOW_COUPON", name: BRANDING.sidebar.coupon, link: "/admin/coupon", icon: <MdLocalOffer /> },
-
-    { key: "SHOW_DELIVERY", name: BRANDING.sidebar.delivery, link: "/admin/delivery", icon: <TbTruckDelivery /> },
-
-    { key: "SHOW_LOCATIONS", name: "Locations", link: "/admin/locations", icon: <TbTruckDelivery /> },
-
-    { key: "SHOW_USERS", name: BRANDING.sidebar.users, link: "/admin/users", icon: <FaUsers /> },
-
-    { key: "SHOW_TIMMING", name: "Opening Timing", link: "/admin/day-schedule/form", icon: <MdAccessTime /> },
-
-    {
-      key: "SHOW_OUTLET",
-      name: "Outlet",
-      link: "/admin/outlet",
-      icon: <MdSettings />,
-    },
-    {
-    key: "SHOW_TABLES",
-    name: "Tables",
-    link: "/admin/tables",
-    icon: <MdTableBar />, // ⭐ or another icon
-  },
-
-    { key: "SHOW_SETTING", name: BRANDING.sidebar.setting, link: "/admin/setting", icon: <MdSettings /> },
-
-    { key: "SHOW_DATA_BACKUP", name: BRANDING.sidebar.data_backup, link: "/admin/data-backup", icon: <MdOutlineBackup /> },
+ 
   ];
 
   const filteredMenu = menuList.filter((item) => sidebarFlags[item.key]);

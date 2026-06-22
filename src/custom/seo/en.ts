@@ -46,6 +46,7 @@ export const BRANDING = {
   sidebar: {
   home: "Home",
   orders: "Orders",
+   messages: "Messages",
   orders_realtime: "Orders Realtime",
   sale: "Sale",
   reservations: "Reservations",

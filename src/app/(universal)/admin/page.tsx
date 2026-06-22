@@ -1,5 +1,5 @@
 'use client'
-import ListView from './orders/components/ListView'
+import ListView from './project-requirements/components/ListView'
 
 
 export default function Page(){
