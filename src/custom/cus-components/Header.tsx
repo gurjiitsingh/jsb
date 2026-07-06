@@ -54,10 +54,10 @@ const Header = () => {
           <Navbar />
         </div>
 
-        <div className="flex items-center gap-3">
+        {/* <div className="flex items-center gap-3">
           {headerFlags.SHOW_LANGUAGE_SWITCHER && <LanguageSwitcher />}
           {headerFlags.SHOW_LOGIN_BUTTON && <Login />}
-        </div>
+        </div> */}
       </div>
     </header>
   );

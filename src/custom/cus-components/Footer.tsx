@@ -9,6 +9,7 @@ import {
   Roboto,
   Abel,
 } from "next/font/google";
+import SocialLinksBox from "./SocialLinksBox";
 
 const cinzel = Cinzel({
   subsets: ["latin"],
@@ -39,20 +40,20 @@ const fonts = {
 
 const fontTitle =
   fonts[
-    process.env
-      .NEXT_PUBLIC_FONT_TITLE as keyof typeof fonts
+  process.env
+    .NEXT_PUBLIC_FONT_TITLE as keyof typeof fonts
   ] || cinzel;
 
 const fontDescription =
   fonts[
-    process.env
-      .NEXT_PUBLIC_FONT_DESCRIPTION as keyof typeof fonts
+  process.env
+    .NEXT_PUBLIC_FONT_DESCRIPTION as keyof typeof fonts
   ] || lato;
 
 const fontPrice =
   fonts[
-    process.env
-      .NEXT_PUBLIC_FONT_PRICE as keyof typeof fonts
+  process.env
+    .NEXT_PUBLIC_FONT_PRICE as keyof typeof fonts
   ] || roboto;
 
 type FooterLink = {
@@ -164,12 +165,12 @@ export default function Footer({
 
   const companyName = outlet?.web
     ? new URL(
-        outlet.web.startsWith("http")
-          ? outlet.web
-          : `https://${outlet.web}`
-      ).hostname
+      outlet.web.startsWith("http")
+        ? outlet.web
+        : `https://${outlet.web}`
+    ).hostname
     : outlet?.outletName ||
-      fallbackBrand.brand_name;
+    fallbackBrand.brand_name;
 
   return (
     <footer className="relative overflow-hidden bg-white pt-30 pb-25">
@@ -191,31 +192,22 @@ export default function Footer({
 
             <div className="bg-white/80 backdrop-blur-sm border border-neutral-200 rounded-3xl p-6 shadow-[0_10px_40px_rgba(0,0,0,0.03)]">
 
-              <Link href="/">
-                <img
-                  className="h-24 object-contain"
-                  src={
-                    outlet?.logo ||
-                    "/logo.png"
-                  }
-                  alt={
-                    fallbackText.logo_alt
-                  }
-                />
-              </Link>
+          
 
-              <h3
-                className={`${fontPrice.className} text-lg font-medium text-neutral-900 mt-4`}
-              >
-                {
-                  fallbackBrand.brand_name
-                }
-              </h3>
+               <div>
 
-              <p className="text-sm text-neutral-500 mt-2 leading-relaxed">
-                Premium fashion for
-                modern lifestyles.
-              </p>
+            <h3
+              className={`${fontTitle.className} text-sm font-semibold uppercase tracking-[4px] text-neutral-900 mb-5`}
+            >
+              {
+                fallbackText.sections
+                  .social.title
+              }
+            </h3>
+
+            <SocialLinksBox />
+
+          </div>
 
             </div>
 
@@ -293,21 +285,36 @@ export default function Footer({
           {/* Social */}
           <div>
 
-            <h3
-              className={`${fontTitle.className} text-sm font-semibold uppercase tracking-[4px] text-neutral-900 mb-5`}
-            >
-              {
-                fallbackText.sections
-                  .social.title
-              }
-            </h3>
+           
+        <div>
 
-            <p className="text-neutral-600 text-sm leading-relaxed">
-              Follow us on social media
-              for new arrivals, exclusive
-              drops and seasonal
-              collections.
-            </p>
+    <Link href="/">
+                <img
+                  className="h-24 object-contain"
+                  src={
+                    outlet?.logo ||
+                    "/logo.png"
+                  }
+                  alt={
+                    fallbackText.logo_alt
+                  }
+                />
+              </Link>
+
+              <h3
+                className={`${fontPrice.className} text-lg font-medium text-neutral-900 mt-4`}
+              >
+                {
+                  fallbackBrand.brand_name
+                }
+              </h3>
+
+              <p className="text-sm text-neutral-500 mt-2 leading-relaxed">
+
+              </p>
+
+
+        </div>
 
           </div>
 

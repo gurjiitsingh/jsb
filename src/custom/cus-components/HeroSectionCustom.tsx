@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { Cormorant_Garamond } from "next/font/google";
+import Link from "next/link";
 
 const cormorant = Cormorant_Garamond({
   subsets: ["latin"],
@@ -16,7 +17,7 @@ export default function HeroSection() {
         <span className="mb-1 inline-block text-xs uppercase tracking-[0.45em] text-gray-400">
           Featured Projects
         </span>
-
+<div className="flex flex-col gap-3 w-full items-center justify-center">
         <h2
           className={`${cormorant.className} text-4xl font-medium leading-tight text-white sm:text-5xl md:text-6xl`}
         >
@@ -25,7 +26,18 @@ export default function HeroSection() {
           <span className="text-gray-300">
             With Vision & Detail
           </span>
+
         </h2>
+<div className="mt-16 text-center">
+  <Link
+    href="/discuss-your-project"
+    className="inline-block rounded-full border bg-slate-700 text-slate-100 border-white/20 px-8 py-4 transition hover:bg-white hover:text-black"
+  >
+    Discuss Your Project
+  </Link>
+</div>
+
+        </div>
 
         <div className="mx-auto mt-6 h-px w-24 bg-white/20" />
 

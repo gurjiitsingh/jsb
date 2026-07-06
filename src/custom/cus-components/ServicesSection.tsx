@@ -163,7 +163,7 @@ export default function ServicesSection() {
 <div className="mt-16 text-center">
   <Link
     href="/discuss-your-project"
-    className="inline-block rounded-full border border-white/20 px-8 py-4 transition hover:bg-white hover:text-black"
+    className="inline-block rounded-full border bg-slate-400 border-white/20 px-8 py-4 transition hover:bg-white hover:text-black"
   >
     Discuss Your Project
   </Link>

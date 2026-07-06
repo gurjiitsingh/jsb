@@ -113,7 +113,7 @@ export default function AboutSection() {
                   </p>
 
                   <h3
-                    className={`${cormorant.className} mt-5 text-5xl font-medium leading-tight`}
+                    className={`${cormorant.className} mt-5 text-2xl xl:text-5xl font-medium leading-tight`}
                   >
                     Form
                     <br />
