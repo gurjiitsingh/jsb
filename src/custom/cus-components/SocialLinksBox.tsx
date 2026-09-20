@@ -1,30 +1,31 @@
 import React from 'react';
-import { Instagram, Youtube, Link2 } from 'lucide-react';
+import { Instagram, Youtube, Link2, Facebook } from 'lucide-react';
 
 export default function SocialLinksBox() {
   const socialLinks = [
-    {
-      name: 'Instagram',
-      url: 'https://www.instagram.com/js.balaji_design_studios?igsh=dm8yem96enM4bnAz',
-      icon: <Instagram className="w-5 h-5" />,
-      hoverClass: 'hover:bg-gradient-to-tr hover:from-yellow-500 hover:to-purple-600 hover:text-white',
-      handle: '@js.balaji_design_studios'
-    },
-    {
-      name: 'YouTube',
-      url: 'https://youtube.com/@jsbalajidesignerstudio?si=6mYnNv1MzzdqbRvf',
-      icon: <Youtube className="w-5 h-5" />,
-      hoverClass: 'hover:bg-red-600 hover:text-white',
-      handle: 'JSB Balaji Designer Studio'
-    },
-    {
-      name: 'Linktree',
-      url: 'https://linktr.ee/jsbdesignstudio',
-      icon: <Link2 className="w-5 h-5" />,
-      hoverClass: 'hover:bg-emerald-500 hover:text-zinc-900',
-      handle: 'jsbdesignstudio'
-    }
-  ];
+  {
+    name: 'Facebook',
+    url: 'https://www.facebook.com/share/1EmHoQxfeu/?mibextid=wwXIfr',
+    icon: <Facebook className="w-5 h-5" />,
+    hoverClass: 'hover:bg-blue-600 hover:text-white',
+    handle: 'JSB Designs Studio'
+  },
+  {
+    name: 'Instagram',
+    url: 'https://www.instagram.com/jsb_designs_studio?stkn=aGUycTV6M3NyNmhq&utm_source=qr',
+    icon: <Instagram className="w-5 h-5" />,
+    hoverClass:
+      'hover:bg-gradient-to-tr hover:from-yellow-500 hover:via-pink-500 hover:to-purple-600 hover:text-white',
+    handle: '@jsb_designs_studio'
+  },
+  {
+    name: 'YouTube',
+    url: 'https://youtube.com/@jsb.designsstudio?si=6QXqywEsZ7ETlP4s',
+    icon: <Youtube className="w-5 h-5" />,
+    hoverClass: 'hover:bg-red-600 hover:text-white',
+    handle: 'JSB Designs Studio'
+  }
+];
 
   return (
     <div className="w-full max-w-md p-6 rounded-2xl bg-zinc-900 border border-zinc-800 text-zinc-100 shadow-xl">

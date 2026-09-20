@@ -287,14 +287,11 @@ export default function Footer({
 
            
         <div>
-
+ {/* // outlet?.logo || */}
     <Link href="/">
                 <img
                   className="h-24 object-contain"
-                  src={
-                    outlet?.logo ||
-                    "/logo.png"
-                  }
+                  src={"/logo.jpg"}
                   alt={
                     fallbackText.logo_alt
                   }
